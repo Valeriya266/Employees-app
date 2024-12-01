@@ -18,7 +18,7 @@ class App extends Component {
         {name: "Carl W.", salary: 5000, increase: false, rise: false, id: 3}
       ],
       term: '',
-      filter: 'rise'
+      filter: 'all'
     }
     this.maxId = 4;
   }
@@ -34,7 +34,7 @@ class App extends Component {
   addItem = (name, salary) => {
     const newItem = {
       name,
-      salary, 
+      salary: parseFloat(salary), 
       increase: false,
       rise: false,
       id: this.maxId ++
